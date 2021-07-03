@@ -121,7 +121,7 @@ elif choice == 'Encryptor':
         with open(file_name, 'rb') as f:
             data = f.read()
         b64 = base64.b64encode(data).decode()
-        st.write(file_name)
+        #st.write(file_name)
         file_name = file_name.split("/")[1]
         href = f'<a href="data:application/octet-stream;base64,{b64}" download="{file_name}">Download {file_name}</a>'
         st.markdown(href,unsafe_allow_html=True)
@@ -148,7 +148,7 @@ elif choice == "Decryptor":
         with open(file_name, 'rb') as f:
             data = f.read()
         b64 = base64.b64encode(data).decode()         
-        file_name = file_name.split("\\")[0]
+        file_name = file_name.split("/")[1]
         href = f'<a href="data:application/octet-stream;base64,{b64}" download="{file_name}">Download {file_name}</a>'
         st.markdown(href,unsafe_allow_html=True)
     
