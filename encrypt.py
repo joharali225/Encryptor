@@ -4,8 +4,8 @@ from os import listdir
 from os.path import isfile, join
 from numpy import byte
 import streamlit as st
-from Cryptodome.Cipher import AES
-from Cryptodome import Random
+from Cryptodo.Cipher import AES
+from Cryptodo import Random
 import base64
 
 class Encryptor:
